@@ -17,7 +17,7 @@ grey: #F2F2F2
 html {
   font-family: 'Raleway', 'sans serif';
   font-size: 16px;
-  max-width: 1380px;
+  max-width: 400px;
   margin: auto;
   scroll-behavior: smooth;
   transition: all ease-in-out 0.2s;
