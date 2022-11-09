@@ -19,6 +19,7 @@ html {
   scroll-behavior: smooth;
   /* transition: all ease-in-out 0.2s; */
   background-color: black;
+  min-width: 250px;
 }
 
 a {
@@ -38,7 +39,7 @@ ul {
 
 /* MAIN */
 main {
-  max-width: 400px;
+  /* max-width: 400px; */
   margin: auto;
   background-color: white;
   display: flex;
@@ -94,7 +95,7 @@ header p {
   display: inline-block;
   border-radius: 50px;
   background: rgb(147,86,220);
-  background: linear-gradient(180deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+  background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
 }
 
 /* FONCTIONNEMENT */
@@ -148,8 +149,20 @@ header p {
   flex: 1 1 0;
   border-radius: 20px;
   box-shadow: 0 5px 10px lightgray;
-  /* width: 340px;
-  height: 250px; */
+}
+
+.restaurant-new {
+  position: absolute;
+  margin-top: 20px;
+  margin-left: -95px;
+  background-color: #a9e0d1;
+  text-align: center;
+  font-weight: 500;
+  color: #408b6e;
+  padding: 8px 10px;
+  font-size: 14px;
+  border-radius: 2px;
+  box-shadow: 0 0 5px black;
 }
 
 .restaurant-card img {
