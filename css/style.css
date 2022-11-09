@@ -31,6 +31,11 @@ h1 {
   font-size: 24px;
 }
 
+ul {
+  list-style-type: none !important;
+  padding-left: 0;
+}
+
 /* MAIN */
 main {
   max-width: 400px;
@@ -55,17 +60,23 @@ header p {
 
 /* LOCATION */
 .location {
-  background-color: lightgrey;
+  background-color: #ddd;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
-  box-shadow: inset 0 3px 3px grey;
+  box-shadow: inset 0 3px 3px gray;
+  color: #444;
+  font-weight: 500;
+}
 
+.location i {
+  margin-right: 10px;
 }
 
 /* EXPLORE */
 .explore {
+  background-color: #f3f3f3;
   padding : 20px;
   text-align: center;
 }
@@ -94,25 +105,23 @@ header p {
   padding : 20px;
 }
 
-.fonctionnement div {
+.fonctionnement-list {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   align-items: center;
-  /* justify-content: center; */
-  /* background-color: lightgray; */
-  margin: 10px 0;
-  padding: 15px;
+  margin: 10px 20px;
+  padding: 10px;
   border-radius: 20px;
   box-shadow: 0 5px 10px lightgray;
   font-weight: 600;
 }
 
-.fonctionnement .numero {
+.fonctionnement-list-numero {
   color: white;
   border-radius: 30px;
   background-color: #9356DC;
   padding: 5px 10px;
-  margin-left: -28px;
+  margin-left: -25px;
   font-weight: 400;
 }
 
@@ -120,4 +129,95 @@ header p {
   margin: 0 20px;
   color: gray;
   font-size: 20px;
+}
+
+/* RESTAURANTS */
+.restaurants {
+  background-color: #f3f3f3;
+  display: flex;
+  flex-flow: column wrap;
+  flex: 1 1 0;
+  padding: 20px;
+  gap: 20px;
+}
+
+.restaurant-card {
+  background-color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1 1 0;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px lightgray;
+  /* width: 340px;
+  height: 250px; */
+}
+
+.restaurant-card img {
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  height: 175px;
+}
+
+.restaurant-card-info {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 20px 15px;
+}
+
+.restaurant-card-text {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1 1 0;
+  gap: 5px;
+}
+
+.restaurant-card p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.restaurant-name {
+  font-weight: 600;
+}
+
+.restaurant-location {
+  font-weight: 300;
+}
+
+.restaurant-icon {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 24px;
+}
+
+/* FOOTER */
+footer {
+  background-color: #444;
+  color: white;
+  padding: 20px;
+}
+
+.ohmyfood {
+  font-family: 'Shrikhand', cursive;
+  font-weight: 400;
+}
+
+footer i {
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+footer li {
+  margin: 10px 0;
+}
+
+footer li:nth-child(-n+2) {
+  font-weight: 400;
+}
+
+footer li:nth-child(n+3) {
+  font-weight: 300;
 }
