@@ -170,6 +170,7 @@ header p {
   font-size: 14px;
   border-radius: 2px;
   box-shadow: 0 0 5px black;
+  z-index: 1;
 }
 
 .restaurant-card img {
@@ -241,3 +242,78 @@ footer li:nth-child(-n+2) {
 footer li:nth-child(n+3) {
   font-weight: 300;
 }
+
+/* LOADER */
+.loader-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.75);
+  z-index: 2;
+}
+
+.loader {
+  position: absolute;
+  left: calc(50vw - 60px);
+  top: calc(50vh - 60px);
+}
+
+.load-bar1 {
+  border: 10px solid transparent; /* Light grey */
+  border-top: 10px solid #9356DC; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+.load-bar2 {
+  border: 10px solid transparent; /* Light grey */
+  border-top: 10px solid #FF79DA; /* Blue */
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite;
+}
+
+.load-bar3 {
+  border: 10px solid transparent; 
+  border-top: 10px solid #99E2D0; 
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#hideBackground {
+  animation: hideBackground 1s linear 2s forwards;
+  animation-fill-mode: forwards;
+}
+@keyframes hideBackground {
+  to {
+      opacity: 0;
+      overflow:hidden;
+      visibility:hidden;
+      transform-origin: 50% 50%;
+  }
+}
+
+#hideSpinner {
+  animation: hideSpinner 1s linear 2s forwards;
+  animation-fill-mode: forwards;
+}
+@keyframes hideSpinner {
+  to {
+      transform: scale(0);
+      opacity: 0;
+      overflow:hidden;
+      visibility:hidden;
+      transform-origin: 50% 50%;
+  }
+}
+
