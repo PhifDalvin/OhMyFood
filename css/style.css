@@ -50,6 +50,9 @@ body {
   flex: 1 1 0;
 }
 
+main {
+}
+
 /* LOGO */
 header {
   margin: auto;
@@ -280,7 +283,7 @@ footer li:nth-child(n+3) {
 }
 
 /* LOADER */
- 
+/*  
 .loader-container {
   position: fixed;
   width: 100%;
@@ -296,7 +299,7 @@ footer li:nth-child(n+3) {
 }
 
 .load-bar1 {
-  border: 10px solid transparent; 
+  border: 10px solid transparent;
   border-top: 10px solid #9356DC;
   border-radius: 50%;
   width: 120px;
@@ -306,7 +309,7 @@ footer li:nth-child(n+3) {
 
 .load-bar2 {
   border: 10px solid transparent;
-  border-top: 10px solid #FF79DA; 
+  border-top: 10px solid #FF79DA;
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -352,5 +355,5 @@ footer li:nth-child(n+3) {
     visibility:hidden;
     transform-origin: 50% 50%;
   }
-}
+} */
 
