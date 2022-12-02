@@ -17,7 +17,6 @@ html {
   font-family: 'Roboto', 'sans serif';
   font-size: 16px;
   scroll-behavior: smooth;
-  /* transition: all ease-in-out 0.2s; */
   background-color: black;
   min-width: 250px;
 }
@@ -93,7 +92,7 @@ header p {
   color: gray;
 } 
 
-.explore button {
+button {
   border: none;
   color: white;
   padding: 15px 20px;
@@ -101,11 +100,22 @@ header p {
   text-decoration: none;
   display: inline-block;
   border-radius: 50px;
-  background: rgb(147,86,220);
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
   background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
 }
 
+button:hover {
+  background-color:   rgba(255,182,235,1);
+  background: linear-gradient(0deg, rgba(174,121,237,1) 0%, rgba(255,182,235,1) 100%);
+}
+
 /* FONCTIONNEMENT */
+.fonctionnement-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
 .fonctionnement {
   display: flex;
   flex-flow: column nowrap;
@@ -140,13 +150,18 @@ header p {
 }
 
 /* RESTAURANTS */
-.restaurants {
+.restaurants-container {
   background-color: #f3f3f3;
+}
+
+.restaurants {
   display: flex;
   flex-flow: column wrap;
   flex: 1 1 0;
   padding: 20px;
   gap: 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .restaurant-card {
@@ -211,14 +226,35 @@ header p {
   flex-flow: row nowrap;
   align-items: center;
   padding: 0 10px;
+  /* font-size: 24px; */
+}
+
+.fa-regular.fa-heart {
+  color: black;
+  font-size: 24px;
+}
+
+.fa-solid.fa-heart {
+  color: #408b6e;
+  font-size: 0px;
+  transition: all ease-in-out 0.5s;
+}
+
+span.fa-stack:hover .fa-solid.fa-heart  {
   font-size: 24px;
 }
 
 /* FOOTER */
+.footer-container {
+  background-color: #444;
+}
+
 footer {
   background-color: #444;
   color: white;
   padding: 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .ohmyfood {
@@ -244,6 +280,7 @@ footer li:nth-child(n+3) {
 }
 
 /* LOADER */
+ 
 .loader-container {
   position: fixed;
   width: 100%;
@@ -259,8 +296,8 @@ footer li:nth-child(n+3) {
 }
 
 .load-bar1 {
-  border: 10px solid transparent; /* Light grey */
-  border-top: 10px solid #9356DC; /* Blue */
+  border: 10px solid transparent; 
+  border-top: 10px solid #9356DC;
   border-radius: 50%;
   width: 120px;
   height: 120px;
@@ -268,8 +305,8 @@ footer li:nth-child(n+3) {
 }
 
 .load-bar2 {
-  border: 10px solid transparent; /* Light grey */
-  border-top: 10px solid #FF79DA; /* Blue */
+  border: 10px solid transparent;
+  border-top: 10px solid #FF79DA; 
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -296,10 +333,10 @@ footer li:nth-child(n+3) {
 }
 @keyframes hideBackground {
   to {
-      opacity: 0;
-      overflow:hidden;
-      visibility:hidden;
-      transform-origin: 50% 50%;
+    opacity: 0;
+    overflow:hidden;
+    visibility:hidden;
+    transform-origin: 50% 50%;
   }
 }
 
@@ -309,11 +346,11 @@ footer li:nth-child(n+3) {
 }
 @keyframes hideSpinner {
   to {
-      transform: scale(0);
-      opacity: 0;
-      overflow:hidden;
-      visibility:hidden;
-      transform-origin: 50% 50%;
+    transform: scale(0);
+    opacity: 0;
+    overflow:hidden;
+    visibility:hidden;
+    transform-origin: 50% 50%;
   }
 }
 

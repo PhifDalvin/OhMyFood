@@ -1,0 +1,2 @@
+Besoin de rassembler les fichiers CSS ? Ou les garder séparer est OK ?
+Transition background dégradé
