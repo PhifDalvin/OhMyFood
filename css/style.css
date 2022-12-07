@@ -50,9 +50,6 @@ body {
   flex: 1 1 0;
 }
 
-main {
-}
-
 /* LOGO */
 header {
   margin: auto;
@@ -98,19 +95,22 @@ header p {
 button {
   border: none;
   color: white;
-  padding: 15px 20px;
+  width: 220px;
+  height: 50px;
+  /* padding: 15px 20px; */
   text-align: center;
   text-decoration: none;
   display: inline-block;
   border-radius: 50px;
   cursor: pointer;
-  transition: all ease-in-out 0.5s;
-  background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+  transition: all ease-in-out 0.2s;
+  box-shadow: inset 0px 125px 30px -100px #FF79DA, 0 0 5px rgba(0, 0, 0, 0.5);
+  background-color: #9356DC;
 }
 
 button:hover {
-  background-color:   rgba(255,182,235,1);
-  background: linear-gradient(0deg, rgba(174,121,237,1) 0%, rgba(255,182,235,1) 100%);
+  box-shadow: inset 0px 125px 30px -100px #ff99e2, 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: #a172db;
 }
 
 /* FONCTIONNEMENT */
@@ -120,24 +120,28 @@ button:hover {
 }
 
 .fonctionnement {
-  display: flex;
-  flex-flow: column nowrap;
-  flex: 1 1 0;
   padding : 20px;
 }
-
 .fonctionnement-list {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+}
+
+.fonctionnement-item {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  margin: 10px 20px;
+  flex: 1 1 0;
+  margin-left: 15px;
   padding: 10px;
+  min-width: 200px;
   border-radius: 20px;
   box-shadow: 0 5px 10px lightgray;
   font-weight: 600;
 }
 
-.fonctionnement-list-numero {
+.fonctionnement-item-numero {
   color: white;
   border-radius: 30px;
   background-color: #9356DC;
@@ -150,6 +154,10 @@ button:hover {
   margin: 0 20px;
   color: gray;
   font-size: 20px;
+}
+
+.fonctionnement p {
+  margin-right: 10px;
 }
 
 /* RESTAURANTS */
@@ -262,7 +270,12 @@ footer {
 
 .ohmyfood {
   font-family: 'Shrikhand', cursive;
+  font-size: 1.2em;
   font-weight: 400;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 footer i {
@@ -274,16 +287,11 @@ footer li {
   margin: 10px 0;
 }
 
-footer li:nth-child(-n+2) {
-  font-weight: 400;
+footer ul li:nth-child(-n+2) {
+  font-weight: 600;
 }
 
-footer li:nth-child(n+3) {
-  font-weight: 300;
-}
-
-/* LOADER */
-/*  
+/* LOADER */ 
 .loader-container {
   position: fixed;
   width: 100%;
@@ -355,5 +363,5 @@ footer li:nth-child(n+3) {
     visibility:hidden;
     transform-origin: 50% 50%;
   }
-} */
+}
 
