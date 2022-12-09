@@ -166,7 +166,7 @@ button:hover {
   background-color: #f3f3f3;
 }
 
-.restaurants {
+#restaurants-list {
   display: flex;
   flex-flow: column wrap;
   flex: 1 1 0;
@@ -240,6 +240,7 @@ button:hover {
 }
 
 .restaurant-icon {
+  cursor: pointer;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
