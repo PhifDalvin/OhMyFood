@@ -187,8 +187,8 @@ button:hover {
 }
 
 .restaurant-card:hover {
-  transform: scale(1.05);
-  background-color: #99e2d050;
+  box-shadow: 0 5px 10px gray;
+  background-color: ghostwhite;
 }
 
 .restaurant-new {
@@ -240,7 +240,6 @@ button:hover {
 }
 
 .restaurant-icon {
-  cursor: pointer;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -253,12 +252,13 @@ button:hover {
 }
 
 .fa-solid.fa-heart {
+  cursor: pointer;
   color: #408b6e;
   font-size: 0px;
   transition: all ease-in-out 0.5s;
 }
 
-span.fa-stack:hover .fa-solid.fa-heart  {
+.fa-solid.fa-heart:hover  {
   font-size: 24px;
 }
 
