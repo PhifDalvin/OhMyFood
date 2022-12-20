@@ -535,7 +535,7 @@ button {
 }
 
 #hideBackground {
-  animation: hideBackground 1s linear 2s forwards;
+  animation: hideBackground 0.5s linear 2s forwards;
   animation-fill-mode: forwards;
 }
 @keyframes hideBackground {
@@ -548,7 +548,7 @@ button {
 }
 
 #hideSpinner {
-  animation: hideSpinner 1s linear 2s forwards;
+  animation: hideSpinner 0.5s linear 2s forwards;
   animation-fill-mode: forwards;
 }
 @keyframes hideSpinner {
