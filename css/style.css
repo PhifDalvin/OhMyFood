@@ -148,12 +148,21 @@ header p {
 }
 
 .fonctionnement {
+  display: flex;
+  flex-flow: column nowrap;
   padding : 20px;
 }
+
 .fonctionnement-list {
   display: flex;
   flex-flow: row wrap;
   gap: 20px;
+}
+
+@media (max-width: 767px) {
+  .fonctionnement-list {
+    flex-flow: column nowrap;
+  }
 }
 
 .fonctionnement-item {
@@ -196,9 +205,14 @@ header p {
 /* RESTAURANTS */
 .restaurants-container {
   background-color: #f3f3f3;
+  margin: auto;
 }
 
-#restaurants-list {
+.restaurants-container h1 {
+  flex: 0 0 100%;
+}
+
+.restaurants-list {
   display: flex;
   flex-flow: column wrap;
   flex: 1 1 0;
@@ -212,7 +226,7 @@ header p {
   background-color: white;
   display: flex;
   flex-flow: column nowrap;
-  flex: 1 1 0;
+  flex: 1 1 calc(50% - 20px);
   border-radius: 20px;
   box-shadow: 0 5px 10px lightgray;
   transition: all ease-out 0.2s;
@@ -221,6 +235,15 @@ header p {
 .restaurant-card:hover {
   box-shadow: 0 5px 10px gray;
   background-color: ghostwhite;
+}
+
+@media (min-width: 768px) {
+  .restaurants-list {
+    flex-flow: row wrap;
+  }
+  .restaurant-card {
+    max-width: 50%;
+  }
 }
 
 .restaurant-new {
@@ -286,8 +309,8 @@ header p {
 .fa-solid.fa-heart {
   cursor: pointer;
   background: linear-gradient(190deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 0px;
   transition: all ease-in-out 0.5s;
 }
